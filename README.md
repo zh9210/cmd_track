@@ -11,5 +11,5 @@ Install:
 
 PS:
 1. The scripts need use pstree, so need install psmisc.
-2. The source-highlight also need to install, get the better looks when use less.
+2. The source-highlight also need to install, get the better looks when using less.
 
