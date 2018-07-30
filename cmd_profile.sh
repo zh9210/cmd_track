@@ -24,7 +24,7 @@ else
 fi
 
 
-PPPID=$(pstree -p | grep $$ | sed -r 's/.*sshd()?\(([0-9]+)\).*/\2/g')
+PPPID=$(pstree -p | grep -w $$ | sed -r 's/.*sshd()?\(([0-9]+)\).*/\2/g')
 
 declare -r h2l='
     THIS_HISTORY="$(history 1)"
