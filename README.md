@@ -8,8 +8,9 @@ Install:
 #cp cmd_profile.sh /etc/profile.d/
 3. Restart the rsyslog services  
 #service rsyslog restart
+4. Relogin and input some some command then check the logfile.
 
 PS:
-1. The scripts need use pstree, so need install psmisc.
+1. The scripts need use pstree, so need install psmisc .
 2. The source-highlight also need to install, get the better looks when using less.
 
