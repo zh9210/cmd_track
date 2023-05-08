@@ -15,12 +15,12 @@ export LESS=" -R "
 export HISTCONTROL=ignorespace
 
 # Add cmd tracking
-declare -r REAL_LOGNAME=`/usr/bin/who -m | cut -d" " -f1`
-declare -r REAL_IP=`/usr/bin/who -u am i | awk '{print $NF}'|sed -e 's/[()]//g'`
+declare -r REAL_LOGNAME=`/usr/bin/who -m | cut -d" " -f1`  2&>1 /dev/null
+declare -r REAL_IP=`/usr/bin/who -u am i | awk '{print $NF}'|sed -e 's/[()]//g'` 2&>1 /dev/null
 if [ $USER == root ]; then
-    declare -r PROMT="#"
+    declare -r PROMT="#" 2&>1 /dev/null
 else
-    declare -r PROMT="$"
+    declare -r PROMT="$" 2&>1 /dev/null
 fi
 
 
@@ -38,5 +38,5 @@ declare -r h2l='
             __LAST_COMMAND="$__THIS_COMMAND"
             LAST_HISTORY="$THIS_HISTORY"
         fi
-    fi'
+    fi' 2&>1 /dev/null
 trap "$h2l" DEBUG
