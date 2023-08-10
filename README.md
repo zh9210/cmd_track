@@ -8,7 +8,7 @@ Install:
 #cp cmd_profile.sh /etc/profile.d/
 3. Restart the rsyslog services  
 #service rsyslog restart
-4. Relogin and input some some command then check the logfile.
+4. Relogin and input some command then check the logfile /var/log/cmd_track.log.
 
 PS:
 1. The scripts need use pstree, so need install psmisc .
